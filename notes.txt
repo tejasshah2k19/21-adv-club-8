@@ -1,0 +1,17 @@
+<welcome-file-list>
+	<welcome-file>Login.html</welcome-file> 
+</welcome-file-list>
+
+
+Servlet -- controller -- logic 
+
+
+how to create servlet ?? 
+
+which jar we required for servlet? 
+servlet-api.jar 
+tomcat/lib 
+
+1) class extends HttpServlet 
+2) public void service(HttpServletRequest,HttpServletResponse) 
+3) register and map our servlet in web.xml 
