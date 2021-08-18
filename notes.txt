@@ -15,3 +15,28 @@ tomcat/lib
 1) class extends HttpServlet 
 2) public void service(HttpServletRequest,HttpServletResponse) 
 3) register and map our servlet in web.xml 
+-----------------------------------------------------------
+jsp => html + java 
+
+
+jsp -> default -> html 
+
+jsp -> java 
+	1) java code 
+		scriptlet <%  %>
+	2) java - print 
+		expression <%=name %> 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
