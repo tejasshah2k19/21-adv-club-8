@@ -23,11 +23,34 @@ public class RegistrationServlet2 extends HttpServlet {
 
 		// we can store our data in request scope
 
-		request.setAttribute("firstName", firstName);
-		request.setAttribute("email", email);
-		request.setAttribute("password", password);
+		boolean isError = false;
+		if (firstName == null || firstName.trim().length() == 0) {
+			isError = true;
+			request.setAttribute("firstNameError", "Please Enter FirstName");
+		}
 
-		RequestDispatcher rd = request.getRequestDispatcher("PrintInfo.jsp");
-		rd.forward(request, response);//
+		if (email == null || email.trim().length() == 0) {
+			isError = true;
+			request.setAttribute("emailError", "Please Enter Email");
+		}
+		
+		if(password == null || password.trim().length() == 0) {
+			isError = true;
+			request.setAttribute("passwordError", "Please Enter Password");
+		}
+		
+		
+		RequestDispatcher rd = null;
+
+		if (isError == true) {
+			rd = request.getRequestDispatcher("Signup.jsp");
+		} else {
+			rd = request.getRequestDispatcher("PrintInfo.jsp");
+
+			request.setAttribute("firstName", firstName);
+			request.setAttribute("email", email);
+			request.setAttribute("password", password);
+		}
+		rd.forward(request, response);
 	}
 }

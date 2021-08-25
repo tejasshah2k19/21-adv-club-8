@@ -7,15 +7,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<%
+		String firstNameError = (String) request.getAttribute("firstNameError");
+		String emailError = (String) request.getAttribute("emailError");
+		String passwordError = (String) request.getAttribute("passwordError");
+	%>
 
 
 	<form action="RegistrationServlet2">
-		FirstName : <input type="text" name="firstName" /><Br> Email : <input
-			type="email" name="email" /><br> Password : <input
-			type="password" name="password" /><br> Gender : Male<input
-			type="radio" name="gender" value="male" /> FeMale<input type="radio"
-			name="gender" value="female" /><br> City: <select name="city">
+		FirstName : <input type="text" name="firstName" />
+		<%=firstNameError == null ? "" : firstNameError%>
+		<Br> Email : <input type="email" name="email" />
+		<%=emailError == null ? "" : emailError%>
+		<br> Password : <input type="password" name="password" />
+		<%=passwordError == null ? "" : passwordError%>
+		<br> Gender : Male<input type="radio" name="gender" value="male" />
+		FeMale<input type="radio" name="gender" value="female" /><br>
+		City: <select name="city">
 			<option value="-1">Select City</option>
 			<option value="ahm">Ahmedabad</option>
 			<option value="baroda">Baroda</option>

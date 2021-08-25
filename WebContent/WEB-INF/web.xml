@@ -64,10 +64,22 @@
 	</servlet-mapping>
 
 
+	<!-- <servlet> <servlet-name>LifeCycleServlet</servlet-name> <servlet-class>com.controller.LifeCycleServlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>LifeCycleServlet</servlet-name> 
+		<url-pattern>/LifeCycleServlet</url-pattern> </servlet-mapping> -->
 
 
 
-
+	<servlet>
+		<servlet-name>CalculateSalaryServlet</servlet-name>
+		<servlet-class>com.controller.CalculateSalaryServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>CalculateSalaryServlet</servlet-name>
+		<url-pattern>/CalculateSalaryServlet</url-pattern>
+	</servlet-mapping>
+	
 
 
 

@@ -27,8 +27,56 @@ jsp -> java
 	2) java - print 
 		expression <%=name %> 
 		
+--------------------------------------------------------------
+life cycle :- 
+
+5 steps 
+
+load class 
+create instance 
+call init() -----once 
+call service() ----allTheTime 
+call destroy() -----once
+
+
+
+if i make 300 request then 
+
+how many objects of servlet will created __1__? [ thread]  
+how many times init call __1___?
+how many times service call __300___?
+how many times destroy call __1___?
+
+--------------------------------------------------------------
 		
-		
+jsp/servlet --> configuration
+
+1)xml 
+2)annotation 
+
+-----------------------------------------------
+Take username and basic salary from user. 
+
+calculate total salary and print on browser. 
+
+username : [ ram ] 
+BS       : [ 20000 ] 
+ submit 
+
+user => username / basic salary
+
+output 1)
+
+username : ram 
+BS 	 : 20000
+bonus    : 2000+
+pf       : 2400- 
+TotalSal : 19600/- 
+
+output 2)
+	Please Enter Username 
+	Please Enter BS
+
 		
 		
 		
