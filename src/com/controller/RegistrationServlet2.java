@@ -27,16 +27,29 @@ public class RegistrationServlet2 extends HttpServlet {
 		if (firstName == null || firstName.trim().length() == 0) {
 			isError = true;
 			request.setAttribute("firstNameError", "Please Enter FirstName");
+		}else {
+			request.setAttribute("firstNameValue", firstName);
 		}
 
 		if (email == null || email.trim().length() == 0) {
 			isError = true;
 			request.setAttribute("emailError", "Please Enter Email");
+		}else {
+			request.setAttribute("emailValue", email);
 		}
 		
 		if(password == null || password.trim().length() == 0) {
 			isError = true;
 			request.setAttribute("passwordError", "Please Enter Password");
+		}else {
+			request.setAttribute("passwordValue", password);
+		}
+		
+		if(city == null || city.equals("-1")) {
+			isError = true;
+			request.setAttribute("cityError", "Please Select City");
+		}else {
+			request.setAttribute("cityValue",city);
 		}
 		
 		
