@@ -52,6 +52,10 @@ public class RegistrationServlet2 extends HttpServlet {
 			request.setAttribute("cityValue",city);
 		}
 		
+		if(hobby == null || hobby.length <= 1 ) {
+			isError = true;
+			request.setAttribute("hobbyError", "Please Select atleast two hobby");
+		}
 		
 		RequestDispatcher rd = null;
 

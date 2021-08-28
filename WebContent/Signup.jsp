@@ -12,6 +12,7 @@
 		String emailError = (String) request.getAttribute("emailError");
 		String passwordError = (String) request.getAttribute("passwordError");
 		String cityError = (String) request.getAttribute("cityError");
+		String hobbyError = (String) request.getAttribute("hobbyError");
 		
 		String firstNameValue = (String) request.getAttribute("firstNameValue");
 		String emailValue = (String) request.getAttribute("emailValue");
@@ -46,7 +47,10 @@
 			value="ckt" /> Swimming : :<input type="checkbox" name="hobby"
 			value="swimming" /> WhatsApp :<input type="checkbox" name="hobby"
 			value="wp" /> FaceBook :<input type="checkbox" name="hobby"
-			value="fb" /><br> <input type="submit" value="Signup" />
+			value="fb" />
+			<%=hobbyError == null?"":hobbyError %>
+			
+			<br> <input type="submit" value="Signup" />
 
 
 	</form>
