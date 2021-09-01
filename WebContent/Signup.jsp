@@ -8,28 +8,17 @@
 </head>
 <body>
 	<%
-		String firstNameError = (String) request.getAttribute("firstNameError");
-		String emailError = (String) request.getAttribute("emailError");
-		String passwordError = (String) request.getAttribute("passwordError");
-		String cityError = (String) request.getAttribute("cityError");
-		String hobbyError = (String) request.getAttribute("hobbyError");
-		
-		String firstNameValue = (String) request.getAttribute("firstNameValue");
-		String emailValue = (String) request.getAttribute("emailValue");
-		String passwordValue = (String) request.getAttribute("passwodValue");
+
 		String cityValue = (String) request.getAttribute("cityValue");
+		String hobbyValue = (String) request.getAttribute("hobbyValue");
 	%>
 
 
 	<form action="RegistrationServlet2">
 		FirstName : <input type="text" name="firstName"
-			value="<%=firstNameValue == null ? "" : firstNameValue%>" />
-		<%=firstNameError == null ? "" : firstNameError%>
-		<Br> Email : <input type="email" name="email"
-			value="<%=emailValue == null ? "" : emailValue%>" />
-		<%=emailError == null ? "" : emailError%>
-		<br> Password : <input type="password" name="password" />
-		<%=passwordError == null ? "" : passwordError%>
+			value="${firstNameValue }" /> ${firstNameError} <Br> Email : <input
+			type="email" name="email" value="${emailValue }" /> ${emailError} <br>
+		Password : <input type="password" name="password" /> ${passwordError }
 		<br> Gender : Male<input type="radio" name="gender"
 			checked="checked" value="male" /> FeMale<input type="radio"
 			name="gender" value="female" /><br> City: <select name="city">
@@ -40,17 +29,18 @@
 				<%=cityValue != null && cityValue.equals("baroda") ? "selected" : ""%>>Baroda</option>
 			<option value="surat"
 				<%=cityValue != null && cityValue.equals("surat") ? "selected" : ""%>>Surat</option>
-		</select> 
-		<%=cityError == null?"":cityError %>
-		
-		<br> Hobby: Cricket :<input type="checkbox" name="hobby"
-			value="ckt" /> Swimming : :<input type="checkbox" name="hobby"
-			value="swimming" /> WhatsApp :<input type="checkbox" name="hobby"
-			value="wp" /> FaceBook :<input type="checkbox" name="hobby"
-			value="fb" />
-			<%=hobbyError == null?"":hobbyError %>
-			
-			<br> <input type="submit" value="Signup" />
+		</select> ${cityError } <br> Hobby: Cricket :<input type="checkbox"
+			name="hobby" value="ckt"
+			<%=hobbyValue != null && hobbyValue.contains("ckt") ? "checked" : ""%> />
+		Swimming : :<input type="checkbox" name="hobby" value="swimming"
+			<%=hobbyValue != null && hobbyValue.contains("swimming") ? "checked" : ""%> />
+		WhatsApp :<input type="checkbox" name="hobby" value="wp"
+			<%=hobbyValue != null && hobbyValue.contains("wp") ? "checked" : ""%> />
+		FaceBook :<input type="checkbox" name="hobby" value="fb"
+			<%=hobbyValue != null && hobbyValue.contains("fb") ? "checked" : ""%> />
+
+
+		${hobbyError} <br> <input type="submit" value="Signup" />
 
 
 	</form>
