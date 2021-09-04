@@ -80,10 +80,18 @@ output 2)
 -----------------------------------------------
 
 
-valiadtion 
-
+validation 
 required --> 
+regEx --> pattern 
 
+XXXX@XXX.XX    ^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$ 
+
+String emailRegEx = ""; 
+// . => single character 
+// + => 1 or many 
+
+
+-----------------------------------------------
 		
 		
 		

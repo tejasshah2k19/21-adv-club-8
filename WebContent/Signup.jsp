@@ -17,7 +17,7 @@
 	<form action="RegistrationServlet2">
 		FirstName : <input type="text" name="firstName"
 			value="${firstNameValue }" /> ${firstNameError} <Br> Email : <input
-			type="email" name="email" value="${emailValue }" /> ${emailError} <br>
+			type="text" name="email" value="${emailValue }" /> ${emailError} <br>
 		Password : <input type="password" name="password" /> ${passwordError }
 		<br> Gender : Male<input type="radio" name="gender"
 			checked="checked" value="male" /> FeMale<input type="radio"
