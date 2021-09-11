@@ -93,8 +93,21 @@ String emailRegEx = "";
 
 -----------------------------------------------
 		
+open mysql command line 
+
+create database 21advjava; 
+
+use 21advjava; 
+
+create table student(
+	studentId integer primary key auto_increment,
+	firstName varchar(30),
+	email varchar(30),
+	password varchar(30)
+);
+	
 		
-		
+-----------------------------------------------
 		
 		
 		
