@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>ERROR</title>
 </head>
 <body>
-	<h2>Success</h2>
-	<a href="ListStudentsServlet">List All Students</a>
+
+	<h2>..............Something went Wrong........</h2>
 </body>
 </html>
