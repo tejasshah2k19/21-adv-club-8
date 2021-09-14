@@ -13,6 +13,7 @@
 			type="text" name="email" /><Br> Password: <input type="password"
 			name="password" /><br> <input type="submit" value="Signup" />
 	</form>
+	<a href="ListStudentsServlet">List All Students</a>
 
 </body>
 </html>

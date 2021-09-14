@@ -12,15 +12,37 @@
 	%>
 	<h2>List All Students</h2>
 
-	<%
-		while (rs.next()) {
-			int studentId = rs.getInt("studentId");
-			String firstName = rs.getString("firstName");
-			String email = rs.getString("email");
-			String password = rs.getString("password");
-			out.print(studentId + "\t" + firstName + "\t" + email + "\t" + password+"<br>");
-		}
-	%>
+	<table border="1">
+		<tr>
+			<th>StudentId</th>
+			<th>FirstName</th>
+			<th>Email</th>
+			<th>Password</th>
+			<th>Action</th>
+		</tr>
+
+
+		<%
+			while (rs.next()) {
+				int studentId = rs.getInt("studentId");
+				String firstName = rs.getString("firstName");
+				String email = rs.getString("email");
+				String password = rs.getString("password");
+		%>
+		<tr>
+			<td><%=studentId%></td>
+			<td><%=firstName%></td>
+			<td><%=email%></td>
+			<td><%=password%></td>
+			<td> <a href="DeleteStudentServlet">Delete</a>  </td>
+		</tr>
+
+		<%
+			}
+		%>
+	</table>
+
+
 
 
 
