@@ -52,4 +52,21 @@ public class StudentDao {
 		return rs;
 	}
 
+	public ResultSet getStudentByName(String studentName) {
+
+		ResultSet rs = null;
+		try {
+
+			Connection con = DbConnection.openConnection();
+			PreparedStatement pstmt = con.prepareStatement("select * from student where firstName like ?");
+			pstmt.setString(1, studentName);
+
+			rs = pstmt.executeQuery();
+			return rs;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return null;
+	}
 }
