@@ -69,4 +69,20 @@ public class StudentDao {
 
 		return null;
 	}
+
+	public void deleteStudent(int studentId) {
+
+		try (Connection con = DbConnection.openConnection();
+				PreparedStatement pstmt = con.prepareStatement("delete from student where studentId = ?");
+
+		) {
+
+			pstmt.setInt(1, studentId);
+			pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 }
