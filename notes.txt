@@ -109,7 +109,12 @@ create table student(
 		
 -----------------------------------------------
 		
-		
+create table products (
+	productId integer primary key auto_increment,
+	name varchar(30),
+	price float,
+	qty integer
+);
 		
 		
 		

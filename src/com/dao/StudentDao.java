@@ -85,4 +85,23 @@ public class StudentDao {
 		}
 	}
 
+
+	public ResultSet getStudentById(int studentId) {
+		ResultSet rs = null;
+		try {
+			Connection con = DbConnection.openConnection();
+			// insert query
+			// Statement , PreparedStatement* , CallableStatement
+			PreparedStatement pstmt = con.prepareStatement("select * from student where studentId = ?");
+			pstmt.setInt(1, studentId);
+			// execute
+			rs = pstmt.executeQuery();// select
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+
 }
+

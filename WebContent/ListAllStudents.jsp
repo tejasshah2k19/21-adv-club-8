@@ -11,6 +11,9 @@
 		ResultSet rs = (ResultSet) request.getAttribute("rs");
 	%>
 	<h2>List All Students</h2>
+	
+	<a href="">List Sorted By Name</a>
+	<br>
 
 	<table border="1">
 		<tr>
@@ -35,7 +38,7 @@
 			<td><%=email%></td>
 			<td><%=password%></td>
 			<td><a href="DeleteStudentServlet?studentId=<%=studentId%>">Delete</a>
-				| <a>View</a>
+				| <a href="ViewStudentServlet?studentId=<%=studentId%>">View</a>
 			
 			</td>
 		</tr>
