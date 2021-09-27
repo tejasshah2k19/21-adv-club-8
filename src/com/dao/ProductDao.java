@@ -2,10 +2,30 @@ package com.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import com.util.DbConnection2;
 
 public class ProductDao {
+
+	public void deleteProduct(int productId) {
+
+		try (Connection con = DbConnection2.openConnection();
+				PreparedStatement pstmt = con.prepareStatement("delete from products  where productId =  ? ");) {
+
+			pstmt.setInt(1, productId);
+
+			int i = pstmt.executeUpdate();
+			if (i == 1) {
+				System.out.println("product removed");
+			} else {
+				System.out.println("product deletion failed...");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
 
 	public void addProduct(String productName, float price, int qty) {
 
@@ -26,6 +46,19 @@ public class ProductDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
+	}
+
+	public ResultSet getAllProducts() {
+		try {
+			Connection con = DbConnection2.openConnection();
+			PreparedStatement pstmt = con.prepareStatement("select * from products");
+			ResultSet rs = pstmt.executeQuery();
+			return rs;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 
 	}
 }
