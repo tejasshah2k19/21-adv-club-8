@@ -27,11 +27,14 @@
 			while (rs.next()) {
 		%>
 		<tr>
-			<td><%=rs.getInt("productId") %></td>
-			<td><%=rs.getString("name") %></td>
-			<td><%=rs.getFloat("price") %></td>
-			<td><%=rs.getInt("qty") %></td>
-			<td><a href="DeleteProductServlet?productId=<%=rs.getInt("productId")%>">Delete</a></td>
+			<td><%=rs.getInt("productId")%></td>
+			<td><%=rs.getString("name")%></td>
+			<td><%=rs.getFloat("price")%></td>
+			<td><%=rs.getInt("qty")%></td>
+			<td><a
+				href="DeleteProductServlet?productId=<%=rs.getInt("productId")%>">Delete</a>|
+
+				<a href="EditProductServlet?productId=<%=rs.getInt("productId")%>">Edit</a></td>
 		</tr>
 		<%
 			}
