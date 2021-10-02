@@ -3,7 +3,9 @@ package com.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
+import com.bean.ProductBean;
 import com.util.DbConnection2;
 
 public class ProductDao {
@@ -27,15 +29,15 @@ public class ProductDao {
 
 	}
 
-	public void addProduct(String productName, float price, int qty) {
+	public void addProduct(ProductBean productBean) {
 
 		try (Connection con = DbConnection2.openConnection();
 				PreparedStatement pstmt = con
 						.prepareStatement("insert into products (name,price,qty) values (?,?,?)");) {
 
-			pstmt.setString(1, productName);
-			pstmt.setFloat(2, price);
-			pstmt.setInt(3, qty);
+			pstmt.setString(1, productBean.getProductName());
+			pstmt.setFloat(2, productBean.getPrice());
+			pstmt.setInt(3, productBean.getQty());
 
 			int i = pstmt.executeUpdate();
 			if (i == 1) {
@@ -48,7 +50,8 @@ public class ProductDao {
 		}
 
 	}
-	public void updateProduct(String productName, float price, int qty,int productId) {
+
+	public void updateProduct(String productName, float price, int qty, int productId) {
 
 		try (Connection con = DbConnection2.openConnection();
 				PreparedStatement pstmt = con
@@ -69,18 +72,40 @@ public class ProductDao {
 		}
 
 	}
-	public ResultSet getAllProducts() {
+
+	public ArrayList<ProductBean> getAllProducts() {
 		try {
 			Connection con = DbConnection2.openConnection();
 			PreparedStatement pstmt = con.prepareStatement("select * from products");
-			ResultSet rs = pstmt.executeQuery();
-			return rs;
+			ResultSet rs = pstmt.executeQuery(); // memory --- db
+
+			ArrayList<ProductBean> products = new ArrayList<>();
+
+			while (rs.next()) {
+				
+				String productName = rs.getString("name");
+				float price = rs.getFloat("price");
+				int qty = rs.getInt("qty");
+				
+				ProductBean productBean = new ProductBean();
+				
+				productBean.setProductId(rs.getInt("productId"));
+				productBean.setProductName(productName);
+				productBean.setPrice(price);
+				productBean.setQty(qty);
+				
+				products.add(productBean);
+				
+			}
+			rs.close();
+			return products;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
 
 	}
+
 	public ResultSet getProductById(int productId) {
 		try {
 			Connection con = DbConnection2.openConnection();

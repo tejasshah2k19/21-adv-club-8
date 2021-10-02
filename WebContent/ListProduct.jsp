@@ -1,3 +1,5 @@
+<%@page import="com.bean.ProductBean"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.sql.ResultSet"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
@@ -11,7 +13,7 @@
 
 
 	<%
-		ResultSet rs = (ResultSet) request.getAttribute("rs");
+		ArrayList<ProductBean> products = (ArrayList<ProductBean>) request.getAttribute("products");
 	%>
 
 	<Table border="1">
@@ -24,17 +26,18 @@
 		</tr>
 
 		<%
-			while (rs.next()) {
+			for (int i = 0; i < products.size(); i++) {
 		%>
 		<tr>
-			<td><%=rs.getInt("productId")%></td>
-			<td><%=rs.getString("name")%></td>
-			<td><%=rs.getFloat("price")%></td>
-			<td><%=rs.getInt("qty")%></td>
+			<td><%=products.get(i).getProductId()%></td>
+			<td><%=products.get(i).getProductName()%></td>
+			<td><%=products.get(i).getPrice()%></td>
+			<td><%=products.get(i).getQty()%></td>
 			<td><a
-				href="DeleteProductServlet?productId=<%=rs.getInt("productId")%>">Delete</a>|
+				href="DeleteProductServlet?productId=<%=products.get(i).getProductId()%>">Delete</a>|
 
-				<a href="EditProductServlet?productId=<%=rs.getInt("productId")%>">Edit</a></td>
+				<a
+				href="EditProductServlet?productId=<%=products.get(i).getProductId()%>">Edit</a></td>
 		</tr>
 		<%
 			}
