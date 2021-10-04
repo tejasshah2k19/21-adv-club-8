@@ -116,6 +116,35 @@ create table products (
 	qty integer
 );
 		
+-----------------------------------------------
+
+filter -> incoming request 
+
+
+user ---> request ------>  filter |---> server 
+
+
+
+pakistan -> reject  
+
+whatsapp --> send pic ---> 27mb --> compress ---> 15mb ---> whatsapp server --> poojan 
+ 
+whatsapp --> send msg ---> Hi --> encrypt ---> DSSD ---> whatsapp server --> DSSD ---> decrypt---> poojan 
+
+
+1) create class and implements Filter interface [ javax.servlet.Filter ] 
+2) override all the methods  [ init doFilter{logic} destroy ] 
+3) map your filter with servlet in web.xml 
+
+
+
+
+
+
+
+
+
+
 		
 		
 		

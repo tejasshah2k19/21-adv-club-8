@@ -74,29 +74,30 @@
 		<servlet-name>CalculateSalaryServlet</servlet-name>
 		<servlet-class>com.controller.CalculateSalaryServlet</servlet-class>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>CalculateSalaryServlet</servlet-name>
 		<url-pattern>/CalculateSalaryServlet</url-pattern>
 	</servlet-mapping>
-	
 
 
 
+	<servlet>
+		<servlet-name>SignupServlet2</servlet-name>
+		<servlet-class>com.controller.SignupServlet2</servlet-class>
+	</servlet>
 
+	<servlet-mapping>
+		<servlet-name>SignupServlet2</servlet-name>
+		<url-pattern>/SignupServlet2</url-pattern>
+	</servlet-mapping>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<filter>
+		<filter-name>SignupFilter</filter-name>
+		<filter-class>com.filter.SignupFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SignupFilter</filter-name>
+		<servlet-name>SignupServlet2</servlet-name>
+	</filter-mapping>
 </web-app>
