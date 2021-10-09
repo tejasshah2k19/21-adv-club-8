@@ -20,18 +20,18 @@
 					<div class="form-group">
 						<label for="email">FirstName:</label> <input type="text"
 							class="form-control" id="email" placeholder="Enter firstname"
-							name="firstName">
+							name="firstName"> ${firstNameError }
 					</div>
 
 					<div class="form-group">
 						<label for="email">Email:</label> <input type="text"
 							class="form-control" id="email" placeholder="Enter email"
-							name="email">
+							name="email">${emailError }
 					</div>
 					<div class="form-group">
 						<label for="pwd">Password:</label> <input type="password"
 							class="form-control" id="pwd" placeholder="Enter password"
-							name="pswd">
+							name="pswd">${passwordError }
 					</div>
 					<div class="form-group form-check">
 						<label class="form-check-label"> <input
