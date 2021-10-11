@@ -100,4 +100,17 @@
 		<filter-name>SignupFilter</filter-name>
 		<servlet-name>SignupServlet2</servlet-name>
 	</filter-mapping>
+
+
+	<filter>
+		<filter-name>EmailValidatorFilter</filter-name>
+		<filter-class>com.filter.EmailValidatorFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>EmailValidatorFilter</filter-name>
+		<servlet-name>SignupServlet2</servlet-name>
+	</filter-mapping>
+
+
 </web-app>
