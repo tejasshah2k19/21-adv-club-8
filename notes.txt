@@ -136,7 +136,15 @@ whatsapp --> send msg ---> Hi --> encrypt ---> DSSD ---> whatsapp server --> DSS
 2) override all the methods  [ init doFilter{logic} destroy ] 
 3) map your filter with servlet in web.xml 
 
+-----------------------------------------------
 
+how facebook or any other webapp identify the user? 
+if you place an order it will add in your order but not other user's order ? 
+
+
+webapplications uses session to store user's information. 
+
+when user logged in into app one unique id is store into session. 
 
 
 
