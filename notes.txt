@@ -146,6 +146,21 @@ webapplications uses session to store user's information.
 
 when user logged in into app one unique id is store into session. 
 
+----------------------------------------------------------------------------
+
+User will login with any username and password. 
+once user login you need to track his/her activities.
+
+after login user will redirect to SessionHome.jsp where 5 products are display and user 
+can buy product. 
+
+
+you need to maintain order of user's.
+user can view their orders using view my orders link on home page. 
+
+user can access their orders only 
+----------------------------------------------------------------------------
+
 
 
 
