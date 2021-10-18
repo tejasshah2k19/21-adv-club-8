@@ -160,6 +160,25 @@ user can view their orders using view my orders link on home page.
 
 user can access their orders only 
 ----------------------------------------------------------------------------
+session --> session is an object of HttpSession , which created by server in server's memory. 
+ 		--> to store user's info 
+ 		
+ 		
+ 		
+ user info 
+ 1) session -- server side --server memory -- every user will get session  
+ 2) cookie --- client side -- browser 
+
+
+how to access session ?
+HttpSession session = request.getSession();
+
+
+How To set data into session ?
+session.setAttribute("key","value");
+
+How to destroy session?
+session.invalidate();
 
 
 

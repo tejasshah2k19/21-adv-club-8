@@ -10,6 +10,7 @@
 
 	Email :->
 	<%=session.getAttribute("email")%>
-
+	<br> 
+	<a href="SessionLogoutServlet">Logout</a>
 </body>
 </html>

@@ -5,6 +5,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
-<body>Welcome....<br><a href="SessionPrintInfo.jsp">PrintInfo</a>
+<body>
+	Welcome....
+	<br>
+	<a href="SessionPrintInfo.jsp">PrintInfo</a>
+
+	<br>
+
+	<br>
+
+	<div style="border: 1px">
+		<img src="" /> <br> iphone11 <br> 45000 <br> <a
+			href="SessionAddToCartServlet">AddToCart</a>
+	</div>
+
+
 </body>
 </html>
