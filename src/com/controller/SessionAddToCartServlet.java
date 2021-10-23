@@ -17,7 +17,7 @@ public class SessionAddToCartServlet extends HttpServlet {
 
 		int productId = Integer.parseInt(request.getParameter("productId"));
 		HttpSession session = request.getSession();
-		session.setAttribute("prodctId", productId);
+		session.setAttribute("productId", productId);
 
 //		if (productId == 1) {
 //			// iphone

@@ -10,44 +10,42 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	
+
 	<div class="container-fluid">
-	Welcome....
-	<br>
-	<a href="SessionPrintInfo.jsp">PrintInfo</a>
+		Welcome.... <br> <a href="SessionPrintInfo.jsp">PrintInfo</a> | <a
+			href="SessionViewMyCart.jsp">My Cart</a> <br> <br> <br>
+		<br>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	
-	<div class="row">
-		<div class="col-md-4">
-			<span style="border: 1px"> <img src="assets/images/iphone11.png"
-				height="200" width="200" /> <br> iphone11 <br> 45000 <br>
-				<a href="SessionAddToCartServlet?productId=1">AddToCart</a>
-			</span>
-				
+		<div class="row">
+			<div class="col-md-4">
+				<span style="border: 1px"> <img
+					src="assets/images/iphone11.png" height="200" width="200" /> <br>
+					iphone11 <br> 45000 <br> <a
+					href="SessionAddToCartServlet?productId=1">AddToCart</a>
+				</span>
+
+			</div>
+
+			<div class="col-md-4">
+				<span style="border: 1px"> <img
+					src="assets/images/legiony540.jpg" height="200" width="200" /> <br>
+					Legion 540 <br> 55000 <br> <a
+					href="SessionAddToCartServlet?productId=2">AddToCart</a>
+				</span>
+
+			</div>
+
+			<div class="col-md-4">
+				<span style="border: 1px"> <img
+					src="assets/images/microwave oven.jpg" height="200" width="200" />
+					<br> LG Oven <br>35000 <br> <a
+					href="SessionAddToCartServlet?productId=3">AddToCart</a>
+				</span>
+
+			</div>
+
 		</div>
-	
-		<div class="col-md-4">
-			<span style="border: 1px"> <img src="assets/images/legiony540.jpg"
-				height="200" width="200" /> <br> Legion 540 <br> 55000 <br>
-				<a href="SessionAddToCartServlet?productId=2">AddToCart</a>
-			</span>
-		
-		</div>
-	
-		<div class="col-md-4">
-			<span style="border: 1px"> <img src="assets/images/microwave oven.jpg"
-				height="200" width="200" /> <br> LG Oven <br>35000 <br>
-				<a href="SessionAddToCartServlet?productId=3">AddToCart</a>
-			</span>
-		
-		</div>
-	
+
 	</div>
-
-</div>
 </body>
 </html>
