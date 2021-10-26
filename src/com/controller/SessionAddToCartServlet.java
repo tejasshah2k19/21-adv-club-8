@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,8 +19,11 @@ public class SessionAddToCartServlet extends HttpServlet {
 		int productId = Integer.parseInt(request.getParameter("productId"));
 		HttpSession session = request.getSession();
 		session.setAttribute("productId", productId);
-
-//		if (productId == 1) {
+		ArrayList<Integer> cart = (ArrayList<Integer>) session.getAttribute("cart");
+		cart.add(productId);
+		session.setAttribute("cart", cart);
+		
+		//		if (productId == 1) {
 //			// iphone
 //		} else if (productId == 2) {
 //			// legion y540

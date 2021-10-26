@@ -182,7 +182,10 @@ session.invalidate();
 
 
 
+how to destroy session automatically when user is inactive or left the site? 
 
+1) programming    : seconds 
+2) configuration  : minutes 
 
 
 

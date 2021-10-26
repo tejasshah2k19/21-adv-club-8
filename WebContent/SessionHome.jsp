@@ -13,7 +13,9 @@
 
 	<div class="container-fluid">
 		Welcome.... <br> <a href="SessionPrintInfo.jsp">PrintInfo</a> | <a
-			href="SessionViewMyCart.jsp">My Cart</a> <br> <br> <br>
+			href="SessionViewMyCart.jsp">My Cart</a>| 
+			
+			<a href="SessionLogoutServlet">Logout</a> <br> <br> <br>
 		<br>
 
 		<div class="row">

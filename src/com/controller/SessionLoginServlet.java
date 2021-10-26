@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,10 +21,13 @@ public class SessionLoginServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		HttpSession session = request.getSession();// access session
 		// add some data into session
-		session.setAttribute("email",email);
+		session.setAttribute("email", email);
+		session.setAttribute("cart", new ArrayList<Integer>()); // blank
+
+		session.setMaxInactiveInterval(60);// seconds
+
 		RequestDispatcher rd = request.getRequestDispatcher("SessionHome.jsp");
 		rd.forward(request, response);
-		
 
 	}
 }
