@@ -187,9 +187,33 @@ how to destroy session automatically when user is inactive or left the site?
 1) programming    : seconds 
 2) configuration  : minutes 
 
+----------------------------------------------------------------------------
+listener:- 
+			listen some events 
+			server start --> google api connection open 
+			server stop --> google api connection close
+			
+			session create --> total online users => counter++
+			session destroy --> total online users => counter-- 
+			
+			request --> setAttribute --> 
+			...................
 
+1) class -> implements XXXListener 
+2) override -> method 
+3) configuration ->web.xml -> map
+						
 
-
+----------------------------------------------------------------------------
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
