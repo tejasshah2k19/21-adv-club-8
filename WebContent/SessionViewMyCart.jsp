@@ -31,38 +31,66 @@
 
 
 	<h2>My Cart</h2>
-
+	<br>
+	<a href="SessionHome.jsp">Home</a>
+	<br>
+	<br>
 	<%
 		ArrayList<Integer> cart = (ArrayList<Integer>) session.getAttribute("cart");
 	%>
 
 
 	<%
-		int iphone = 0;
-		int oven = 0;
-		int legion = 0;
-		for (Integer productId : cart) {
-			if (productId == 1) {
-				iphone++;
-			} else if (productId == 2) { //legion 540 out.print("legion 540 55000"); 
-				legion++;
-			} else if (productId == 3) { //oven out.print("LG oven 35000");
-				oven++;
+		if (cart.size() == 0) {
+			out.print("Cart is Empty");
+
+		} else {
+			int iphone = 0;
+			int oven = 0;
+			int legion = 0;
+			for (Integer productId : cart) {
+				if (productId == 1) {
+					iphone++;
+				} else if (productId == 2) { //legion 540 out.print("legion 540 55000"); 
+					legion++;
+				} else if (productId == 3) { //oven out.print("LG oven 35000");
+					oven++;
+				}
 			}
-		}
-
-		if (iphone != 0) {
-			out.print("Iphone 11 &nbsp;&nbsp;&nbsp;&nbsp;" + iphone + " &nbsp;&nbsp;45000&nbsp;&nbsp; " + (45000 * iphone) + "<br>");
-		}
-
-		if (legion != 0) {
-			out.print("Legion 540 &nbsp;&nbsp;&nbsp;&nbsp;   " + legion + "&nbsp;&nbsp; 55000 &nbsp;&nbsp;" + (55000 * legion) + "<br>");
-		}
-
-		if (oven != 0) {
-			out.print("Oven &nbsp;&nbsp;&nbsp;&nbsp;" + oven + " &nbsp;&nbsp;35000&nbsp;&nbsp; " + (35000 * oven) + "<br>");
-		}
 	%>
+
+	<table border="1">
+		<tr>
+			<th>ProductName</th>
+			<th>Qty</th>
+			<th>Price</th>
+			<th>TotalPrice</th>
+			<th>Action</th>
+		</tr>
+
+		<%
+			if (iphone != 0) {
+					out.print("<tr><td>Iphone 11 </td><td>" + iphone + "</td><td>45000</td><td>" + (45000 * iphone)
+							+ "</td><td><a href='SessionCartQtyServlet?productId=1'>Qty--</a></td></tr>");
+				}
+
+				if (legion != 0) {
+					out.print("<tr><td>Legion 540 </td><td> " + legion + "</td><td>55000</td><td>" + (55000 * legion)
+							+ "</td><td><a href='SessionCartQtyServlet?productId=2'>Qty--</a></td></tr>");
+				}
+				if (oven != 0) {
+					out.print("<tr><td>Oven</td><td>" + oven + "</td><td>35000</td><td> " + (35000 * oven)
+							+ "</td><td><a href='SessionCartQtyServlet?productId=3'>Qty--</a></td></tr>");
+				}
+			}
+		%>
+
+	</table>
+
+
+
+
+
 
 
 

@@ -5,7 +5,6 @@ import javax.servlet.http.HttpSessionListener;
 
 //session --> create ++  destroy -- 
 public class TotalUserCountListener implements HttpSessionListener {
-
 	int totalOnlineUsers = 0;
 
 	@Override
@@ -24,6 +23,5 @@ public class TotalUserCountListener implements HttpSessionListener {
 		totalOnlineUsers--;
 		System.out.println("user loggedOut");
 		System.out.println("Total Online Users " + totalOnlineUsers);
-
 	}
 }
