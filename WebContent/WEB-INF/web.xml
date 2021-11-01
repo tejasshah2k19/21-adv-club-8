@@ -92,4 +92,14 @@
     <servlet-name>SessionCartQtyServlet</servlet-name>
     <url-pattern>/SessionCartQtyServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddCookieServlet</display-name>
+    <servlet-name>AddCookieServlet</servlet-name>
+    <servlet-class>com.controller.AddCookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddCookieServlet</servlet-name>
+    <url-pattern>/AddCookieServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

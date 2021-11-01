@@ -205,9 +205,14 @@ listener:-
 						
 
 ----------------------------------------------------------------------------
-		
-		
-		
+session --> server side --> secure --> costly --> 
+cookie -->  client side --> browser --> 
+----------------------------------------------------------------------------
+take cookie name and cookie value from user and store it. 
+also add 1 jsp that prints all cookie name and values 
+----------------------------------------------------------------------------
+
+
 		
 		
 		
