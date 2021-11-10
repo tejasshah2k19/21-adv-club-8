@@ -211,7 +211,19 @@ cookie -->  client side --> browser -->
 take cookie name and cookie value from user and store it. 
 also add 1 jsp that prints all cookie name and values 
 ----------------------------------------------------------------------------
-
+headers -> 
+	request headers --> client[browser][user] --> server -> hidden information 
+	response headers --> server --> client[browser] --> information  
+	
+	js disable ?
+	image ? 
+	os ?
+	browser ?
+	lang ? 
+----------------------------------------------------------------------------
+	
+	
+	
 
 		
 		
