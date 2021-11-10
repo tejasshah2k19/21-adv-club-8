@@ -221,8 +221,11 @@ headers ->
 	browser ?
 	lang ? 
 ----------------------------------------------------------------------------
+	make 1 jsp page -->  HeaderWelcome.jsp 
+	above jsp will print welcome message and current time  [ HH:MM:SS ] 
+	also refresh jsp in every 20 seconds [ user will not referesh it will auto. ] 
 	
-	
+----------------------------------------------------------------------------
 	
 
 		
