@@ -227,9 +227,29 @@ headers ->
 	
 ----------------------------------------------------------------------------
 	
+html --> a  b h1 
 
+custom tag -> <time> -> print time 
+jstl --> java standard tag library 		
+		
+		jstl ->
+		
+		1) formatting
+		2) xml
+		3) sql 
+		4) core# 
+		5) function 
+		
+		1) download jstl-1.2.jar
+		2) link jar - project 
+		3) import required tag in your jsp using taglib directive 
 		
 		
+		
+		
+		
+		
+----------------------------------------------------------------------------
 		
 		
 		
