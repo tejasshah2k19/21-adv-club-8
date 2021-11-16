@@ -8,9 +8,11 @@
 </head>
 <body>
 	<%
-
 		String cityValue = (String) request.getAttribute("cityValue");
 		String hobbyValue = (String) request.getAttribute("hobbyValue");
+
+		
+			
 	%>
 
 

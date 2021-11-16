@@ -244,14 +244,90 @@ jstl --> java standard tag library
 		2) link jar - project 
 		3) import required tag in your jsp using taglib directive 
 		
-		
-		
-		
-		
-		
 ----------------------------------------------------------------------------
 		
+jsp --> java servlet page  , java server page 
+
+jsp -> servlet --> 
+
+life cycle :- 
+
+A.jsp 
+
+1) translation   A.jsp --> A.java 
+2) compilation   A.java --> A.class 
+3) load class 
+4) instance
+5) init()   -- jspInit() 
+6) service  --  _jspService() 
+7) destroy() -- jspDestroy() 
+
+----------------------------------------------------------------------------
+9 implicit object => 
+
+ 		page 
+ 		pageContext#
+ 		out 
+ 		config 
+ 		request
+ 		response
+ 		session
+ 		application
+ 		exception*
+
+----------------------------------------------------------------------------
+reusable web component :- 
+	inclusion
 		
+		
+InclusionHome.jsp 
+
+eComm :- header 
+	home page content 
+contactUs :- footer 
+
+
+InclusionProduct.jsp 
+
+eCom :- header 
+	Product content 
+footer 
+	
+----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 		
 		
 		
