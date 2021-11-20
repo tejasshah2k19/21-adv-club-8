@@ -302,6 +302,47 @@ footer
 				it will redirect to inclusive jsp [footer.jsp ]
 ----------------------------------------------------------------------------
 
+EL -> ${firstNameError} request | 
+
+scope --> page  
+		  request 
+		  session 
+		  application 
+		  
+
+request.setAttribute("firstNameError","please enter firstName"); 
+${firstNameError} 
+
+
+session.setAttribute("firstNameError","please enter firstName"); 
+${firstNameError} 
+
+
+application.setAttribute("firstNameError","please enter firstName"); 
+${firstNameError} 
+
+
+request.setAttribute("firstNameError","please enter firstName1"); 
+session.setAttribute("firstNameError","please enter firstName2"); 
+application.setAttribute("firstNameError","please enter firstName3"); 
+ 
+${firstNameError}
+${sessionScope.firstNameError}
+${requestScope.firstNameError}
+${applicationScope.firstNameError}
+
+${cookie.firstName} 
+
+${3+4}
+${3*4}
+${a==b}
+${a > b}
+${a gt b}
+${a lt b}
+${a ge b}
+
+
+----------------------------------------------------------------------------
 
 
 
@@ -313,6 +354,25 @@ footer
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------
 
 
 
