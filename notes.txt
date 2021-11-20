@@ -344,7 +344,16 @@ ${a ge b}
 
 ----------------------------------------------------------------------------
 
+EL  function :- 
 
+
+time() 
+date()
+
+1)  EL function -- class 
+2)  tld 
+3)  web.xml --> tld
+4)  jsp --> tld --> use 
 
 
 
