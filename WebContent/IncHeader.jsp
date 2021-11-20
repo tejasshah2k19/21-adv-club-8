@@ -11,6 +11,6 @@
 
 
 	<h2><u> <font color="green"> eCommerce</font></u></h2>
-
+	<% int x = 90; %>
 </body>
 </html>

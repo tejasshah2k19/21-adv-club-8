@@ -293,6 +293,13 @@ eCom :- header
 	Product content 
 footer 
 	
+	
+	
+		1) static inclusion   <%@include file=""%> 
+				your all code will copy-paste to included jsp  [header.jsp -> home.jsp ]  
+	
+		2) dynamic inclusion <jsp:include> 
+				it will redirect to inclusive jsp [footer.jsp ]
 ----------------------------------------------------------------------------
 
 

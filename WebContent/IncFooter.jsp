@@ -7,5 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>contactus : 1234567890
+<%int k=900; %>
 </body>
 </html>
