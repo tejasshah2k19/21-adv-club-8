@@ -357,38 +357,32 @@ date()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ----------------------------------------------------------------------------
 
 
+custom tag --> user define tag 
+
+
+<b>
+<br>
+<u>
+
+
+<greet></greet>
+<sum n1="20" n2="30"></sum> 
+
+1) class - logic 
+2) .tld 
+3) web.xml 
+4) jsp - use
 
 
 
+1) simple tag [ SimpleTag =>  SimpleTagSupport ]  
+2) classic tag [ Tag => TagSupport ] 
 
 
+# jar --> jsp-api.jar 
 
 
 
