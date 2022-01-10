@@ -1,0 +1,22 @@
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+
+	<tag>
+	
+		<name>time</name>
+		<tag-class>com.ctag.TimeTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+ 
+ <tag>
+ 	<name>sqr</name>
+ 	<tag-class>com.ctag.SqrTag</tag-class>
+ 	<body-content>JSP</body-content>
+ 	<attribute>
+ 		<name>num</name>
+ 		<rtexprvalue>true</rtexprvalue>
+ 	</attribute>
+ </tag>
+ 
+</taglib>
