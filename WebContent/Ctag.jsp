@@ -14,6 +14,10 @@
 	<c:sqr num="4"></c:sqr>
 	<br>
 
+	<c:print count="5">Royal<br></c:print>
+
 	<br> hi...
+
+
 </body>
 </html>

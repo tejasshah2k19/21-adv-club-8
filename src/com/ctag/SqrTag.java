@@ -27,7 +27,6 @@ public class SqrTag extends TagSupport {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 		return super.doStartTag();
 	}
 
