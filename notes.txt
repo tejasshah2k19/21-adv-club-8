@@ -388,7 +388,8 @@ custom tag --> user define tag
 
 
 tag with body and attribute 
-
+	
+	IterationTag
 <print count="5">Royal<br></print> 
 
 Royal
@@ -397,10 +398,26 @@ Royal
 Royal
 Royal
 
+-------------------------------------------------
+
+body content -- modify 
+
+	BodyTag 
+	
 
 
+class XXX extends TagSupport{
 
 
+}
+
+Upper 
+
+<upper>royal</upper>
+
+ROYAL 
+
+-----------------------------
 
 
 

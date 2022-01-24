@@ -15,9 +15,11 @@
 	<br>
 
 	<c:print count="5">Royal<br></c:print>
+<br><BR>
 
+<c:upper>royal</c:upper>
 	<br> hi...
-
+	<br>
 
 </body>
 </html>

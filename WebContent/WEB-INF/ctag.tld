@@ -27,5 +27,12 @@
 		<name>count</name>
 		<rtexprvalue>true</rtexprvalue>
 	</attribute>
-</tag> 
+</tag>
+
+
+<tag>
+	<name>upper</name>
+	<tag-class>com.ctag.UpperTag</tag-class>
+	<body-content>JSP</body-content>
+</tag>  
 </taglib>
